@@ -1,48 +1,100 @@
 import 'package:flutter/material.dart';
 
-class BottomNavBar extends StatefulWidget {
+class BottomNavBar extends StatelessWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
-
-class _BottomNavBarState extends State<BottomNavBar> {
-  int _selectedIndex = 2;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.contacts),
-          label: 'Bad cat',
+    final TextStyle textStyle = TextStyle(
+      fontSize: 10,
+    );
+
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        boxShadow: [
+          const BoxShadow(
+            color: Color(0xFF757575),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 5),
+          ),
+        ],
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.accessibility_sharp),
-          label: 'My next treat',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          label: 'Search',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.menu),
-          label: '',
-        ),
-      ],
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
+      ),
+      height: 60,
+      width: double.infinity,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            children: <Widget>[
+              const IconButton(
+                icon: Icon(Icons.contacts),
+                onPressed: null,
+              ),
+              Text(
+                'Bad Cat',
+                style: textStyle,
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.accessibility_new),
+                onPressed: null,
+              ),
+              Text(
+                'My next treat',
+                style: textStyle,
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: null,
+              ),
+              Text(
+                'Home',
+                style: textStyle,
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: null,
+              ),
+              Text(
+                'Search',
+                style: textStyle,
+              ),
+            ],
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.blueAccent,
+            ),
+            child: IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.white,
+                size: 30,
+              ),
+              onPressed: null,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

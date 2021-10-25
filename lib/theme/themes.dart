@@ -14,14 +14,7 @@ class CustomTheme extends ChangeNotifier {
       primaryColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
       iconTheme: const IconThemeData(
-        color: Colors.black,
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        showUnselectedLabels: true,
-        backgroundColor: Colors.white,
-        selectedItemColor: Color(0xFF424242),
-        unselectedItemColor: Color(0xFFBDBDBD),
+        color: Colors.grey,
       ),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
@@ -40,13 +33,6 @@ class CustomTheme extends ChangeNotifier {
       scaffoldBackgroundColor: Colors.black,
       iconTheme: const IconThemeData(
         color: Colors.white,
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        showUnselectedLabels: true,
-        backgroundColor: Colors.black,
-        selectedItemColor: Colors.grey,
-        unselectedItemColor: Color(0xFF212121),
       ),
       textTheme: ThemeData.dark().textTheme,
       appBarTheme: const AppBarTheme(

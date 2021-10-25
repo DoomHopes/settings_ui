@@ -19,11 +19,13 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           fontSize: 18,
         ),
       ),
+      activeTrackColor: Colors.grey[300],
+      inactiveThumbColor: Colors.blue,
       secondary: Container(
         child: const Icon(Icons.dark_mode_outlined),
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: Color(0xFF303030),
+          color: Color(0xFFBDBDBD),
         ),
       ),
       value: _switchValue,

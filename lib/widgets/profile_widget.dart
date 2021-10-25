@@ -35,6 +35,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               'Bad cat',
               style: TextStyle(
                 fontSize: 25,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -44,6 +45,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             child: Text(
               'Edit personal details',
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 fontSize: 15,
               ),
             ),

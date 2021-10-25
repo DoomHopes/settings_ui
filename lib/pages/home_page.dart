@@ -23,6 +23,8 @@ class _HomePageState extends State<HomePage> {
           'Settings',
           style: TextStyle(
             color: Colors.black,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -72,6 +74,16 @@ class _HomePageState extends State<HomePage> {
           ),
           const TitleWidget(
             text: 'Regional',
+          ),
+          const ListTileWidget(
+            text: 'Language',
+            icon: Icon(Icons.language),
+            iconColor: Colors.purple,
+          ),
+          const ListTileWidget(
+            text: 'Logout',
+            icon: Icon(Icons.logout),
+            iconColor: Colors.orange,
           ),
         ],
       ),

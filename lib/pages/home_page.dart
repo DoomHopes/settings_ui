@@ -30,6 +30,12 @@ class HomePage extends StatelessWidget {
           ListTileWidget(
             text: 'Edit profile',
             icon: Icon(Icons.contact_page_outlined),
+            iconColor: Colors.amber,
+          ),
+          ListTileWidget(
+            text: 'Change password',
+            icon: Icon(Icons.vpn_key_outlined),
+            iconColor: Colors.blue,
           ),
         ],
       ),

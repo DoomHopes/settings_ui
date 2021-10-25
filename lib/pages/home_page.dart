@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool _selected = false;
+  bool _selectedDarkMode = false;
+  bool _selectedNotif = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +34,13 @@ class _HomePageState extends State<HomePage> {
           SwitchWidget(
             backgroundIconColor: Colors.grey,
             text: 'Dark Mode',
-            icon: Icon(Icons.nightlight_outlined),
+            icon: const Icon(Icons.nightlight_outlined),
             onChanged: (bool newValue) {
               setState(() {
-                _selected = newValue;
+                _selectedDarkMode = newValue;
               });
             },
-            value: _selected,
+            value: _selectedDarkMode,
           ),
           const TitleWidget(
             text: 'Profile',
@@ -56,6 +57,17 @@ class _HomePageState extends State<HomePage> {
           ),
           const TitleWidget(
             text: 'Notifications',
+          ),
+          SwitchWidget(
+            backgroundIconColor: Colors.green,
+            text: 'Notifications',
+            icon: const Icon(Icons.notifications),
+            onChanged: (bool newValue) {
+              setState(() {
+                _selectedNotif = newValue;
+              });
+            },
+            value: _selectedNotif,
           ),
         ],
       ),

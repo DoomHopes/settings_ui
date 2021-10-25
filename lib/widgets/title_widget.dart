@@ -7,10 +7,17 @@ class TitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 20,
+    return Container(
+      height: 20,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+      child: Text(
+        text,
+        textAlign: TextAlign.left,
+        style: const TextStyle(
+          fontSize: 16,
+          color: Color(0xFF303030),
+        ),
       ),
     );
   }

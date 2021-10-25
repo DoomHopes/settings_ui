@@ -15,10 +15,13 @@ class ListTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        text,
-        style: const TextStyle(
-          fontSize: 18,
+      title: Container(
+        padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 18,
+          ),
         ),
       ),
       leading: Container(

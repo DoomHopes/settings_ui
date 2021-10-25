@@ -13,15 +13,20 @@ class _SwitchWidgetState extends State<SwitchWidget> {
   @override
   Widget build(BuildContext context) {
     return SwitchListTile(
-      title: const Text(
-        'Dark mode',
-        style: TextStyle(
-          fontSize: 18,
+      title: Container(
+        padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
+        child: const Text(
+          'Dark mode',
+          style: TextStyle(
+            fontSize: 18,
+          ),
         ),
       ),
       activeTrackColor: Colors.grey[300],
       inactiveThumbColor: Colors.blue,
       secondary: Container(
+        height: 35,
+        width: 35,
         child: const Icon(Icons.dark_mode_outlined),
         decoration: const BoxDecoration(
           shape: BoxShape.circle,

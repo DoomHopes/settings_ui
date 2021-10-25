@@ -37,6 +37,9 @@ class HomePage extends StatelessWidget {
             icon: Icon(Icons.vpn_key_outlined),
             iconColor: Colors.blue,
           ),
+          TitleWidget(
+            text: 'Notifications',
+          ),
         ],
       ),
     );

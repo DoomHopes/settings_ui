@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings_ui/widgets/list_tile_widget.dart';
 import 'package:settings_ui/widgets/profile_widget.dart';
 import 'package:settings_ui/widgets/theme_mode_switch_widget.dart';
 import 'package:settings_ui/widgets/title_widget.dart';
@@ -25,6 +26,10 @@ class HomePage extends StatelessWidget {
           SwitchWidget(),
           TitleWidget(
             text: 'Profile',
+          ),
+          ListTileWidget(
+            text: 'Edit profile',
+            icon: Icon(Icons.contact_page_outlined),
           ),
         ],
       ),

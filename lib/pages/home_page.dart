@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:settings_ui/theme/config.dart';
+import 'package:settings_ui/widgets/bottom_nav_bar.dart';
 import 'package:settings_ui/widgets/list_tile_widget.dart';
 import 'package:settings_ui/widgets/profile_widget.dart';
 import 'package:settings_ui/widgets/switch_widget.dart';
@@ -93,6 +94,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

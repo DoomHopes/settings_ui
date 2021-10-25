@@ -11,6 +11,7 @@ class TitleWidget extends StatelessWidget {
       height: 20,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+      margin: const EdgeInsets.fromLTRB(0, 15, 0, 15),
       child: Text(
         text,
         textAlign: TextAlign.left,

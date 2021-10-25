@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings_ui/theme/config.dart';
 import 'package:settings_ui/widgets/list_tile_widget.dart';
 import 'package:settings_ui/widgets/profile_widget.dart';
 import 'package:settings_ui/widgets/switch_widget.dart';
@@ -21,11 +22,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text(
           'Settings',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
         ),
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
@@ -41,6 +37,7 @@ class _HomePageState extends State<HomePage> {
             onChanged: (bool newValue) {
               setState(() {
                 _selectedDarkMode = newValue;
+                currentTheme.toggleTheme();
               });
             },
             value: _selectedDarkMode,
@@ -85,6 +82,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.logout),
             iconColor: Colors.orange,
           ),
+          const Center(child: Text('App ver. 1.0')),
         ],
       ),
     );

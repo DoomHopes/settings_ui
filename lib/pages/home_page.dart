@@ -9,6 +9,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Settings'),
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
       ),
       body: const ProfileWidget(),
     );

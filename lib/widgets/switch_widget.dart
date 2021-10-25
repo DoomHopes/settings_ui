@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SwitchWidget extends StatelessWidget {
   final Color backgroundIconColor;
   final String text;
-  final Icon icon;
+  final IconData icon;
   final Function onChanged;
   final bool value;
 
@@ -34,7 +34,10 @@ class SwitchWidget extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: backgroundIconColor,
               ),
-              child: icon,
+              child: Icon(
+                icon,
+                color: Colors.white,
+              ),
             ),
           ),
           Positioned(

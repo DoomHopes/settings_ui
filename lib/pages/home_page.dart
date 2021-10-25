@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
           SwitchWidget(
             backgroundIconColor: Colors.grey,
             text: 'Dark Mode',
-            icon: const Icon(Icons.nightlight_outlined),
+            icon: Icons.nightlight_outlined,
             onChanged: (bool newValue) {
               setState(() {
                 _selectedDarkMode = newValue;
@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
           ),
           const ListTileWidget(
             text: 'Edit profile',
-            icon: Icon(Icons.contact_page_outlined),
+            icon: Icons.contact_page_outlined,
             iconColor: Colors.amber,
           ),
           const ListTileWidget(
             text: 'Change password',
-            icon: Icon(Icons.vpn_key_outlined),
+            icon: Icons.vpn_key_outlined,
             iconColor: Colors.blue,
           ),
           const TitleWidget(
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
           SwitchWidget(
             backgroundIconColor: Colors.green,
             text: 'Notifications',
-            icon: const Icon(Icons.notifications),
+            icon: Icons.notifications,
             onChanged: (bool newValue) {
               setState(() {
                 _selectedNotif = newValue;
@@ -74,15 +74,23 @@ class _HomePageState extends State<HomePage> {
           ),
           const ListTileWidget(
             text: 'Language',
-            icon: Icon(Icons.language),
+            icon: Icons.language,
             iconColor: Colors.purple,
           ),
           const ListTileWidget(
             text: 'Logout',
-            icon: Icon(Icons.logout),
+            icon: Icons.logout,
             iconColor: Colors.orange,
           ),
-          const Center(child: Text('App ver. 1.0')),
+          const Center(
+            child: Text(
+              'App ver. 1.0',
+              style: TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );

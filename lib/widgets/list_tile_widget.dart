@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ListTileWidget extends StatelessWidget {
   final String text;
-  final Icon icon;
+  final IconData icon;
   final Color iconColor;
 
   const ListTileWidget(
@@ -26,7 +26,10 @@ class ListTileWidget extends StatelessWidget {
         ),
       ),
       leading: Container(
-        child: icon,
+        child: Icon(
+          icon,
+          color: Colors.white,
+        ),
         height: 35,
         width: 35,
         decoration: BoxDecoration(

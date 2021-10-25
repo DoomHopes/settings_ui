@@ -5,7 +5,7 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle textStyle = TextStyle(
+    const TextStyle textStyle = TextStyle(
       fontSize: 10,
     );
 
@@ -21,8 +21,8 @@ class BottomNavBar extends StatelessWidget {
           ),
         ],
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
+          topLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
         ),
       ),
       height: 60,
@@ -45,7 +45,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              IconButton(
+              const IconButton(
                 icon: Icon(Icons.accessibility_new),
                 onPressed: null,
               ),
@@ -57,7 +57,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              IconButton(
+              const IconButton(
                 icon: Icon(Icons.home),
                 onPressed: null,
               ),
@@ -69,7 +69,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              IconButton(
+              const IconButton(
                 icon: Icon(Icons.search),
                 onPressed: null,
               ),
@@ -84,7 +84,7 @@ class BottomNavBar extends StatelessWidget {
               shape: BoxShape.circle,
               color: Colors.blueAccent,
             ),
-            child: IconButton(
+            child: const IconButton(
               icon: Icon(
                 Icons.menu,
                 color: Colors.white,

@@ -28,7 +28,8 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
-      body: Column(
+      body: ListView(
+        scrollDirection: Axis.vertical,
         children: <Widget>[
           const ProfileWidget(),
           SwitchWidget(
@@ -68,6 +69,9 @@ class _HomePageState extends State<HomePage> {
               });
             },
             value: _selectedNotif,
+          ),
+          const TitleWidget(
+            text: 'Regional',
           ),
         ],
       ),

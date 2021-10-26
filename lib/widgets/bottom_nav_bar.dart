@@ -5,10 +5,6 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const TextStyle textStyle = TextStyle(
-      fontSize: 10,
-    );
-
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
@@ -26,70 +22,26 @@ class BottomNavBar extends StatelessWidget {
         ),
       ),
       height: 60,
-      width: 395,
+      width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Column(
-            children: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.contacts,
-                  color: Theme.of(context).iconTheme.color,
-                ),
-                onPressed: null,
-              ),
-              const Text(
-                'Bad Cat',
-                style: textStyle,
-              ),
-            ],
+          const MyIconButton(
+            icon: Icons.accessibility_new,
+            text: 'Bad Cat',
           ),
-          Column(
-            children: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.accessibility_new,
-                  color: Theme.of(context).iconTheme.color,
-                ),
-                onPressed: null,
-              ),
-              const Text(
-                'My next treat',
-                style: textStyle,
-              ),
-            ],
+          const MyIconButton(
+            icon: Icons.contacts,
+            text: 'My next treat',
           ),
-          Column(
-            children: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.home,
-                  color: Theme.of(context).iconTheme.color,
-                ),
-                onPressed: null,
-              ),
-              const Text(
-                'Home',
-                style: textStyle,
-              ),
-            ],
+          const MyIconButton(
+            icon: Icons.home,
+            text: 'Home',
           ),
-          Column(
-            children: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.search,
-                  color: Theme.of(context).iconTheme.color,
-                ),
-                onPressed: null,
-              ),
-              const Text(
-                'Search',
-                style: textStyle,
-              ),
-            ],
+          const MyIconButton(
+            icon: Icons.search,
+            text: 'Search',
           ),
           Container(
             decoration: const BoxDecoration(
@@ -107,6 +59,35 @@ class BottomNavBar extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class MyIconButton extends StatelessWidget {
+  final String text;
+  final IconData icon;
+
+  const MyIconButton({Key? key, required this.icon, required this.text})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        IconButton(
+          icon: Icon(
+            icon,
+            color: Theme.of(context).iconTheme.color,
+          ),
+          onPressed: null,
+        ),
+        Text(
+          text,
+          style: const TextStyle(
+            fontSize: 10,
+          ),
+        ),
+      ],
     );
   }
 }

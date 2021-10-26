@@ -35,84 +35,76 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
-      body: Stack(
-        children: [
-          ScrollConfiguration(
-            behavior: MyBehavior(),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                const ProfileWidget(),
-                SwitchWidget(
-                  backgroundIconColor: Colors.grey,
-                  text: 'Dark Mode',
-                  icon: Icons.nightlight_outlined,
-                  onChanged: (bool newValue) {
-                    setState(() {
-                      _selectedDarkMode = newValue;
-                      currentTheme.toggleTheme();
-                    });
-                  },
-                  value: _selectedDarkMode,
-                ),
-                const TitleWidget(
-                  text: 'Profile',
-                ),
-                const ListTileWidget(
-                  text: 'Edit profile',
-                  icon: Icons.contact_page_outlined,
-                  iconColor: Colors.amber,
-                ),
-                const ListTileWidget(
-                  text: 'Change password',
-                  icon: Icons.vpn_key_outlined,
-                  iconColor: Colors.blue,
-                ),
-                const TitleWidget(
-                  text: 'Notifications',
-                ),
-                SwitchWidget(
-                  backgroundIconColor: Colors.green,
-                  text: 'Notifications',
-                  icon: Icons.notifications,
-                  onChanged: (bool newValue) {
-                    setState(() {
-                      _selectedNotif = newValue;
-                    });
-                  },
-                  value: _selectedNotif,
-                ),
-                const TitleWidget(
-                  text: 'Regional',
-                ),
-                const ListTileWidget(
-                  text: 'Language',
-                  icon: Icons.language,
-                  iconColor: Colors.purple,
-                ),
-                const ListTileWidget(
-                  text: 'Logout',
-                  icon: Icons.logout,
-                  iconColor: Colors.orange,
-                ),
-                const Center(
-                  child: Text(
-                    'App ver. 1.0',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
+      body: ScrollConfiguration(
+        behavior: MyBehavior(),
+        child: ListView(
+          children: <Widget>[
+            const ProfileWidget(),
+            SwitchWidget(
+              backgroundIconColor: Colors.grey,
+              text: 'Dark Mode',
+              icon: Icons.nightlight_outlined,
+              onChanged: (bool newValue) {
+                setState(() {
+                  _selectedDarkMode = newValue;
+                  currentTheme.toggleTheme();
+                });
+              },
+              value: _selectedDarkMode,
             ),
-          ),
-          const Positioned(
-            bottom: 1,
-            child: BottomNavBar(),
-          ),
-        ],
+            const TitleWidget(
+              text: 'Profile',
+            ),
+            const ListTileWidget(
+              text: 'Edit profile',
+              icon: Icons.contact_page_outlined,
+              iconColor: Colors.amber,
+            ),
+            const ListTileWidget(
+              text: 'Change password',
+              icon: Icons.vpn_key_outlined,
+              iconColor: Colors.blue,
+            ),
+            const TitleWidget(
+              text: 'Notifications',
+            ),
+            SwitchWidget(
+              backgroundIconColor: Colors.green,
+              text: 'Notifications',
+              icon: Icons.notifications,
+              onChanged: (bool newValue) {
+                setState(() {
+                  _selectedNotif = newValue;
+                });
+              },
+              value: _selectedNotif,
+            ),
+            const TitleWidget(
+              text: 'Regional',
+            ),
+            const ListTileWidget(
+              text: 'Language',
+              icon: Icons.language,
+              iconColor: Colors.purple,
+            ),
+            const ListTileWidget(
+              text: 'Logout',
+              icon: Icons.logout,
+              iconColor: Colors.orange,
+            ),
+            const Center(
+              child: Text(
+                'App ver. 1.0',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }

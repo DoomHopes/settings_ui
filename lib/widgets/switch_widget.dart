@@ -22,55 +22,7 @@ class SwitchWidget extends StatelessWidget {
       color: Colors.transparent,
       height: 55,
       width: double.infinity,
-      child: Row(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
-            child: Container(
-              height: 35,
-              width: 35,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: backgroundIconColor,
-              ),
-              child: Icon(
-                icon,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(55, 0, 0, 0),
-            width: 160,
-            height: 20,
-            child: Text(
-              text,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(125, 0, 10, 0),
-            child: Switch(
-              activeTrackColor: Colors.grey[300],
-              inactiveTrackColor: Colors.grey[300],
-              inactiveThumbColor: Colors.blue,
-              value: value,
-              onChanged: (bool value) {
-                onChanged(value);
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-
-/*Stack(
+      child: Stack(
         children: <Widget>[
           Positioned(
             top: 5,
@@ -113,4 +65,53 @@ class SwitchWidget extends StatelessWidget {
             ),
           ),
         ],
-      ),*/ 
+      ),
+    );
+  }
+}
+
+/*Row(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+            child: Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: backgroundIconColor,
+              ),
+              child: Icon(
+                icon,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(55, 0, 0, 0),
+            width: 160,
+            height: 20,
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(125, 0, 10, 0),
+            child: Switch(
+              activeTrackColor: Colors.grey[300],
+              inactiveTrackColor: Colors.grey[300],
+              inactiveThumbColor: Colors.blue,
+              value: value,
+              onChanged: (bool value) {
+                onChanged(value);
+              },
+            ),
+          ),
+        ],
+      ), */
+
+/**/ 

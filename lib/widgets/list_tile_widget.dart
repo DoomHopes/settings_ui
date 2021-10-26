@@ -37,8 +37,9 @@ class ListTileWidget extends StatelessWidget {
           color: iconColor,
         ),
       ),
-      trailing: const Icon(
+      trailing: Icon(
         Icons.arrow_forward_ios_outlined,
+        color: Theme.of(context).iconTheme.color,
       ),
     );
   }

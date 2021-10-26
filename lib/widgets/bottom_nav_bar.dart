@@ -13,11 +13,11 @@ class BottomNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
         boxShadow: [
-          const BoxShadow(
-            color: Color(0xFF757575),
+          BoxShadow(
+            color: Theme.of(context).shadowColor,
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 5),
+            offset: const Offset(0, 5),
           ),
         ],
         borderRadius: const BorderRadius.only(
@@ -26,18 +26,21 @@ class BottomNavBar extends StatelessWidget {
         ),
       ),
       height: 60,
-      width: double.infinity,
+      width: 395,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
             children: <Widget>[
-              const IconButton(
-                icon: Icon(Icons.contacts),
+              IconButton(
+                icon: Icon(
+                  Icons.contacts,
+                  color: Theme.of(context).iconTheme.color,
+                ),
                 onPressed: null,
               ),
-              Text(
+              const Text(
                 'Bad Cat',
                 style: textStyle,
               ),
@@ -45,11 +48,14 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              const IconButton(
-                icon: Icon(Icons.accessibility_new),
+              IconButton(
+                icon: Icon(
+                  Icons.accessibility_new,
+                  color: Theme.of(context).iconTheme.color,
+                ),
                 onPressed: null,
               ),
-              Text(
+              const Text(
                 'My next treat',
                 style: textStyle,
               ),
@@ -57,11 +63,14 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              const IconButton(
-                icon: Icon(Icons.home),
+              IconButton(
+                icon: Icon(
+                  Icons.home,
+                  color: Theme.of(context).iconTheme.color,
+                ),
                 onPressed: null,
               ),
-              Text(
+              const Text(
                 'Home',
                 style: textStyle,
               ),
@@ -69,11 +78,14 @@ class BottomNavBar extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              const IconButton(
-                icon: Icon(Icons.search),
+              IconButton(
+                icon: Icon(
+                  Icons.search,
+                  color: Theme.of(context).iconTheme.color,
+                ),
                 onPressed: null,
               ),
-              Text(
+              const Text(
                 'Search',
                 style: textStyle,
               ),

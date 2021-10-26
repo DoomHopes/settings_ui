@@ -19,12 +19,18 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           Positioned(
             top: 10,
             left: 20,
-            child: SizedBox(
-              height: 70,
-              width: 70,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(80.0),
-                child: Image.asset('assets/profile.jpg'),
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.red, width: 3),
+                shape: BoxShape.circle,
+              ),
+              child: SizedBox(
+                height: 70,
+                width: 70,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(80.0),
+                  child: Image.asset('assets/profile.jpg'),
+                ),
               ),
             ),
           ),

@@ -14,7 +14,7 @@ class TitleWidget extends StatelessWidget {
         textAlign: TextAlign.left,
         style: const TextStyle(
           fontSize: 16,
-          color: Color(0xFF303030),
+          color: Colors.grey,
           fontWeight: FontWeight.bold,
         ),
       ),

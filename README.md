@@ -1,5 +1,5 @@
 # settings_ui
 
-![light theme](assets/white_theme.png?raw=true)
+![light theme](assets/white_theme.png)
 
-![dark theme](assets/dark_theme.png?raw=true)
+![dark theme](assets/dark_theme.png)

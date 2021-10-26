@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTheme extends ChangeNotifier {
   static bool _isDarkTheme = false;
@@ -19,6 +20,10 @@ class CustomTheme extends ChangeNotifier {
       shadowColor: Colors.grey,
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.white,
+          statusBarIconBrightness: Brightness.dark,
+        ),
         titleTextStyle: TextStyle(
           color: Colors.black,
           fontSize: 25,
@@ -38,6 +43,10 @@ class CustomTheme extends ChangeNotifier {
       shadowColor: Colors.black,
       textTheme: ThemeData.dark().textTheme,
       appBarTheme: const AppBarTheme(
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.black,
+          statusBarIconBrightness: Brightness.light,
+        ),
         backgroundColor: Colors.black,
         titleTextStyle: TextStyle(
           color: Colors.white,

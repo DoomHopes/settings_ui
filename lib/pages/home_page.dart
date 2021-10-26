@@ -32,7 +32,6 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           'Settings',
         ),
-        backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
       body: ScrollConfiguration(

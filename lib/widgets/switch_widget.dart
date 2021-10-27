@@ -69,11 +69,11 @@ class SwitchWidget extends StatelessWidget {
     );
   }
 }
-
-/*Row(
+      /**Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Container(
               height: 35,
               width: 35,
@@ -87,12 +87,11 @@ class SwitchWidget extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(55, 0, 0, 0),
-            width: 160,
-            height: 20,
+          Expanded(
             child: Text(
               text,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -100,7 +99,7 @@ class SwitchWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(125, 0, 10, 0),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Switch(
               activeTrackColor: Colors.grey[300],
               inactiveTrackColor: Colors.grey[300],
@@ -113,5 +112,3 @@ class SwitchWidget extends StatelessWidget {
           ),
         ],
       ), */
-
-/**/ 
